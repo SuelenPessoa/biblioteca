@@ -1,4 +1,4 @@
-var botaoAdicionar = document.querySelector("#adicionar-paciente");
+var botaoAdicionar = document.querySelector("#adicionar-livro");
 botaoAdicionar.addEventListener("click", function(event){
 	event.preventDefault();
 
