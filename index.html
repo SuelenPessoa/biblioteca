@@ -2,113 +2,106 @@
 <html lang="pt-br">
 	<head>
 		<meta charset="UTF-8">
-		<title>Biblioteca</title>
+		<title>Controle de pacientes </title>
 		<link rel="icon" href="icone.png" type="image/x-icon">
 		<link rel="stylesheet" type="text/css" href="css/reset.css">
 		<link rel="stylesheet" type="text/css" href="css/app.css">
-		<link href="https://fonts.googleapis.com/css?family=Lobster|Ranga&display=swap" rel="stylesheet">
 
 	</head>
 	<body>
 
 		<header>
 			<div class="container">
-				<h1 id="titulo">Biblioteca</h1>
+				<h1 id="titulo">Controle de Pacientes</h1>
 			</div>
 		</header>
 		<main>
 			<section class="container">
-				<h2 class="fraseInicial">"A Arte esta nos olhos de quem vê ... "</h2>
+				<h2>Pacientes inclusos</h2>
 
 				<label for="filtrar-tabela">Filtro:</label>
-				<input type="text" name="filtro" id="filtrar-tabela" placeholder="Busque o livro de seu interesse">
+				<input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite o nome do paciente">
 
 				<table>
 					<thead>
 						<tr>
-							<th>Nome do Livro</th>
-							<th>Autor</th>
-							<th>Data de lançamento</th>
-							<th>Categoria</th>
-							<th>Preço</th>
+							<th>Nome</th>
+							<th>Peso(kg)</th>
+							<th>Altura(m)</th>
+							<th>Gordura Corporal(%)</th>
+							<th>IMC</th>
 						</tr>
 					</thead>
 					<tbody id="tabela-pacientes">
 						<tr class="paciente" id="primeiro-paciente">
-							<td class="info-nome">Fallen</td>
-							<td class="info-peso">Lauren Kate</td>
-							<td class="info-altura"> 8/12/2009</td>
-							<td class="info-gordura">Romance</td>
-							<td class="info-imc">R$ 39,90</td>
+							<td class="info-nome">Paulo</td>
+							<td class="info-peso">-100</td>
+							<td class="info-altura">2.00</td>
+							<td class="info-gordura">10</td>
+							<td class="info-imc">0</td>
 						</tr>
 
 						<tr class="paciente" >
-							<td class="info-nome">Um Homem de Sorte</td>
-							<td class="info-peso">Nicholas Sparks</td>
-							<td class="info-altura">2/08/2012</td>
-							<td class="info-gordura">Romance</td>
-							<td class="info-imc">R$ 27,92</td>
+							<td class="info-nome">João</td>
+							<td class="info-peso">80</td>
+							<td class="info-altura">1.72</td>
+							<td class="info-gordura">40</td>
+							<td class="info-imc">0</td>
 						</tr>
 
 						<tr class="paciente" >
-							<td class="info-nome">O Código da Vinci</td>
-							<td class="info-peso">Dan Brown</td>
-							<td class="info-altura">18/03/2003</td>
-							<td class="info-gordura">Suspense / mistério</td>
-							<td class="info-imc">R$ 32,90</td>
+							<td class="info-nome">Erica</td>
+							<td class="info-peso">54</td>
+							<td class="info-altura">1.64</td>
+							<td class="info-gordura">14</td>
+							<td class="info-imc">0</td>
 						</tr>
 
 						<tr class="paciente">
-							<td class="info-nome">Um amor de verdade</td>
-							<td class="info-peso">Zíbia Gasparetto</td>
-							<td class="info-altura">2004</td>
-							<td class="info-gordura">Espírita</td>
-							<td class="info-imc">R$ 28,90</td>
+							<td class="info-nome">Douglas</td>
+							<td class="info-peso">85</td>
+							<td class="info-altura">1.73</td>
+							<td class="info-gordura">24</td>
+							<td class="info-imc">0</td>
 						</tr>
 						<tr class="paciente" >
-							<td class="info-nome">Diário de um Banana</td>
-							<td class="info-peso">Jeff Kinney</td>
-							<td class="info-altura">1/04/2007-presente
-							</td>
-							<td class="info-gordura">Ficção</td>
-							<td class="info-imc">R$ 23,90</td>
+							<td class="info-nome">Tatiana</td>
+							<td class="info-peso">46</td>
+							<td class="info-altura">1.55</td>
+							<td class="info-gordura">19</td>
+							<td class="info-imc">0</td>
 						</tr>
 					</tbody>
 				</table>
 
-				<span id="erro-ajax" class="invisivel">Erro ao buscar livro</span>
-				<button id="buscar-pacientes" class="botao bto-principal">Buscar Livro</button>
+				<span id="erro-ajax" class="invisivel">Erro ao buscar os pacientes</span>
+				<button id="buscar-pacientes" class="botao bto-principal">Buscar Pacientes</button>
 
 			</section>
 		</main>
 
 		<section class="container">
-		    <h2 id="titulo-form">Adicionar novo Livro</h2>
+		    <h2 id="titulo-form">Adicionar novo paciente</h2>
 		    <ul id="mensagens-erro"></ul>
 		    <form id="form-adiciona">
 		        <div class="grupo">
-		            <label for="nome">Nome do livro</label>
-		            <input id="nome" name="nome" type="text" placeholder="digite o nome de um livro" class="campo">
+		            <label for="nome">Nome:</label>
+		            <input id="nome" name="nome" type="text" placeholder="digite o nome do seu paciente" class="campo">
 		        </div>
 		        <div class="grupo">
-		            <label for="peso">Autor</label>
-		            <input id="peso" name="peso" type="text" placeholder="digite o autor do livro" class="campo campo-medio">
+		            <label for="peso">Peso:</label>
+		            <input id="peso" name="peso" type="text" placeholder="digite o peso do seu paciente" class="campo campo-medio">
 		        </div>
 		        <div class="grupo">
-		            <label for="altura">Data de lançamento</label>
-		            <input id="altura" name="altura" type="text" placeholder="digite a data de lançamento" class="campo campo-medio">
+		            <label for="altura">Altura:</label>
+		            <input id="altura" name="altura" type="text" placeholder="digite a altura do seu paciente" class="campo campo-medio">
 		        </div>
 		        <div class="grupo">
-		            <label for="gordura">categoria</label>
-		            <input id="gordura" name="gordura" type="text" placeholder="digite a categoria" class="campo campo-medio">
-				</div>
-
-				<div class="grupo">
-		            <label for="gordura">Preço</label>
-		            <input id="gordura" name="gordura" type="text" placeholder="digite o preço" class="campo campo-medio">
+		            <label for="gordura">% de Gordura:</label>
+		            <input id="gordura" name="gordura" type="text" placeholder="digite a porcentagem de gordura do seu paciente" class="campo campo-medio">
 		        </div>
 
-		        <button id="adicionar-livro" class="botao bto-principal">Adicionar</button>
+		        <button id="adicionar-paciente" class="botao bto-principal">Adicionar</button>
 
 		    </form>
 		</section>

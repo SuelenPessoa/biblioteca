@@ -5,13 +5,15 @@
 body{
 	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 	font-size: 14px;
+	background-image: url('fundo.jpg');
+	background-size: 100%;
 }
 
 .fraseInicial{
 	font-family: 'Ranga', cursive;
 }
 header{
-	background-color: #FF7F50;
+	background-color: #000;
 	height: 3em;
 	color: #FFF;
 	margin-bottom: 1em;
@@ -46,6 +48,7 @@ header .container:before{
 section{
 	margin: 2em 0;
 	overflow: hidden;
+	background-color: #ccc;
 }
 
 section h2{
@@ -59,7 +62,8 @@ section h2{
 table{
 	width: 100%;
 	margin-bottom : .5em;
-    table-layout: fixed;
+	table-layout: fixed;
+	background-color: #ccc;
 
 }
 
@@ -79,6 +83,7 @@ label{
 	color: #555;
 	display: block;
 	margin-bottom: .2em;
+	background-color: #ccc;
 }
 
 .campo{
@@ -88,6 +93,7 @@ label{
 	border: 1px solid #ccc;
 	padding: .7em;
 	width: 100%;
+	background-color: #ccc;
 }
 
 .campo-medio{
@@ -110,12 +116,13 @@ button{
 	margin: 0;
 	margin-top: -3px;
 	color: #fff;
-	background-color:#0c8cd3;
-	border-color: #04324c;
+	background-color:#000;
+	border-color: rgb(231, 247, 87);
 	width: 20%;
     display: block;
     clear: both;
-    margin: 10px 0px;
+	margin: 10px 0px;
+	margin-left: 35%;
 
 }
 
@@ -160,4 +167,8 @@ button[disabled=disabled], button:disabled {
 
 .invisivel {
 	display: none;
+}
+h2{
+	background-color: #ccc;
+	margin-left: 25%;
 }

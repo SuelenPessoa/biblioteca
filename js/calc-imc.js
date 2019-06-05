@@ -14,16 +14,16 @@ for(var i = 0; i < pacientes.length; i++){
 	var tdAltura = paciente.querySelector(".info-altura");
 	var altura = tdAltura.textContent;
 
-	// var tdImc = paciente.querySelector(".info-imc");
+	var tdImc = paciente.querySelector(".info-imc");
 
-	// var pesoEhValido = validaPeso(peso);
-	// var alturaEhValida = validaAltura(altura);
+	var pesoEhValido = validaPeso(peso);
+	var alturaEhValida = validaAltura(altura);
 
-	// if (!pesoEhValido) {
-	// 	console.log("Peso inválido");
-	// 	pesoEhValido = false;
-	// 	tdImc.textContent = "Peso inválido!!";
-	// 	paciente.classList.add("paciente-invalido");
+	if (!pesoEhValido) {
+		console.log("Peso inválido");
+		pesoEhValido = false;
+		tdImc.textContent = "Peso inválido!!";
+		paciente.classList.add("paciente-invalido");
 	}
 
 	if (!alturaEhValida) {
